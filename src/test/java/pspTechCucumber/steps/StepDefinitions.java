@@ -64,7 +64,7 @@ public class StepDefinitions extends BaseClass {
 	}
 	@And("User clicks on the submit button")
 	public void user_clicks_on_the_submit_button() {
-	  logger.info("Submit button clicked");
+	  logger.info("Submit button has been clicked");
 	  CommonMethods.click(registration.regnSubmit, driver);
 	}
 	@Then("User successfully registers into the Murcury Tours application")
@@ -144,45 +144,4 @@ public class StepDefinitions extends BaseClass {
 		Assert.assertEquals(actualUrl, expectedUrl);
 	
 	}
-	
-//	@Given("User navigates to the login page")
-//	public void user_navigates_to_the_login_page() {
-//		System.out.println("Navigated to Login Page");
-//		String actualPageTitle = driver.getTitle();
-//		System.out.println("Actual Title of the page is: " + actualPageTitle);
-//		String expectedPageTitle = "Welcome: Mercury Tours";
-//		Assert.assertEquals(actualPageTitle, expectedPageTitle);	
-//	}
-//	@When("User enters the valid username and valid password")
-//	public void user_enters_the_valid_username_and_valid_password() {
-//		driver.findElement(By.name("userName")).sendKeys("psptech1@gmail.com");
-//		driver.findElement(By.name("password")).sendKeys("Tech#123");
-//		
-//	}
-//	@When("User clicks on the submit button in home page")
-//	public void user_clicks_on_the_submit_button_in_home_page() {
-//		driver.findElement(By.name("submit")).click();
-//	}
-//	@Then("User successfully login into the Murcury Tours application")
-//	public void user_successfully_login_into_the_murcury_tours_application() {
-//		String actualUrl = driver.getCurrentUrl();
-//		String expectedUrl = "https://demo.guru99.com/test/newtours/login_sucess.php";
-//		Assert.assertEquals(actualUrl, expectedUrl);
-//	
-//	}
-//	@When("User enters the invalid credentials")
-//	public void user_enters_the_invalid_credentials() {
-//		driver.findElement(By.name("userName")).sendKeys("psptech1");
-//		driver.findElement(By.name("password")).sendKeys("Tech");
-//	}
-//	@When("User clicks on the submit button in home page with invalid credentials")
-//	public void user_clicks_on_the_submit_button_in_home_page_with_invalid_credentials() {
-//		driver.findElement(By.name("submit")).click();
-//	}
-//	@Then("User failed login into the Murcury Tours application")
-//	public void user_failed_login_into_the_murcury_tours_application() {
-//		String actualUrl = driver.getCurrentUrl();
-//		String expectedUrl = "https://demo.guru99.com/test/newtours/index.php";
-//		Assert.assertEquals(actualUrl, expectedUrl);
-//	}
 }
